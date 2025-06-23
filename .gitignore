@@ -42,3 +42,5 @@ package-lock.json
 /web
 /macos
 /linux
+/build/windows
+/build
