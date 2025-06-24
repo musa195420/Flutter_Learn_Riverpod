@@ -1,10 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final searchProvider =
-    StateNotifierProvider<SearchNotifier, SearchState>((ref) {
-  return SearchNotifier();
-});
-
 class SearchNotifier extends StateNotifier<SearchState> {
   SearchNotifier() : super(SearchState(search: '', isChanged: false));
   void search(String query) {
@@ -15,6 +10,11 @@ class SearchNotifier extends StateNotifier<SearchState> {
     state = state.copyWith(isChanged: isChanged);
   }
 }
+
+final searchProvider =
+    StateNotifierProvider<SearchNotifier, SearchState>((ref) {
+  return SearchNotifier();
+});
 
 class SearchState {
   final String search;
