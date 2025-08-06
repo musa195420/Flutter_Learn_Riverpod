@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:learn/routes/app_route_contants.dart';
 import 'package:learn/search_provider.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -41,6 +43,16 @@ class HomeScreen extends ConsumerWidget {
               },
             );
           }),
+          ElevatedButton(
+              onPressed: () {
+                GoRouter.of(context)
+                    .pushReplacementNamed(MyAppRouteConstants.itemRoute);
+              },
+              child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Text("Item Page")))
         ],
       ),
     );

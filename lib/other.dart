@@ -4,8 +4,8 @@ import 'package:learn/slider_provider.dart';
 
 //To read Contant Value No State Changes
 
-class HomeScreen extends ConsumerWidget {
-  const HomeScreen({super.key});
+class ItemScreen extends ConsumerWidget {
+  const ItemScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
